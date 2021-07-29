@@ -146,9 +146,10 @@ def insert_data_EBT_Mass_Filling(my_dict):
             # print(sqldata.Procseq,sqldata.IsEnable,sqldata.IsActive,sqldata.liveProcessId,sqldata.StartTime,
             #       sqldata.EndTime,sqldata.MstProcessId,sqldata.Duration,sqldata.SopTime,sqldata.ShellNo,sqldata.heatno)
 
-            # Data inseert query...
-            Data_insert_Query = "INSERT INTO liveSubProcess(Procseq, IsEnable,IsActive,liveProcessId,StartTime,EndTime,MstProcessId,Duration,SopTime,ShellNo,heatno) VALUES ('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');".\
-                format(sqldata.Procseq,sqldata.IsEnable,sqldata.IsActive,sqldata.liveProcessId,sqldata.StartTime,sqldata.EndTime,sqldata.MstProcessId,sqldata.Duration,sqldata.SopTime,sqldata.ShellNo,sqldata.heatno)
+            # Data insert query...
+            Data_insert_Query = "INSERT INTO liveSubProcess(Procseq, IsEnable,IsActive,liveProcessId,StartTime,EndTime,MstProcessId,Duration,SopTime,ShellNo,heatno) 
+            VALUES ('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');".\
+            format(sqldata.Procseq,sqldata.IsEnable,sqldata.IsActive,sqldata.liveProcessId,sqldata.StartTime,sqldata.EndTime,sqldata.MstProcessId,sqldata.Duration,sqldata.SopTime,sqldata.ShellNo,sqldata.heatno)
 
             # Checking the sql inserting data
             print(" Data Insert query {}".format(Data_insert_Query))
